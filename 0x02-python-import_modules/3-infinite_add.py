@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 from sys import argv
+
+
 def main():
     su = 0
     for args in argv[1:]:
