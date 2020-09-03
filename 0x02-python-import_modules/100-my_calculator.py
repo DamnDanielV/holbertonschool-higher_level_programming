@@ -2,6 +2,7 @@
 from calculator_1 import add, div, mul, sub
 from sys import argv
 
+
 def main():
     argc = len(argv) - 1
 
