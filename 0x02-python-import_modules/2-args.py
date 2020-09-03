@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 from sys import argv
+
+
 def main():
     args = len(argv) - 1
     i = 1
@@ -11,6 +13,7 @@ def main():
         print("{} arguments:".format(args))
         for arg in argv[1:]:
             print("{}: {}".format(i, arg))
-            i = i +1
+            i = i + 1
+
 if __name__ == '__main__':
     main()
