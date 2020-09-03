@@ -7,4 +7,3 @@ def main():
     print("{:d}".format(su))
 if __name__ == '__main__':
     main()
-
