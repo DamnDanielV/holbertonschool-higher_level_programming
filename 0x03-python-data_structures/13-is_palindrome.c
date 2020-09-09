@@ -19,14 +19,14 @@ int is_palindrome(listint_t **head)
 		tmp = tmp->next;
 		i++;
 	}
-	len = 10;
+	len = sizeof(array) / sizeof(array[0]);
 	for (x = 0; x < len / 2; x++)
 	{
 		temp_array = array[x];
 		array[x] = array[len - 1 - x];
 		array[len - 1 - x] = temp_array;
 	}
-	co = 9;
+	co = len - 1;
 	i = 0;
 	while (i < 10 && co >= 0)
 	{
