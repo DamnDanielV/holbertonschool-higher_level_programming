@@ -43,6 +43,6 @@ int is_palindrome(listint_t **head)
 			temp = temp->next;
 			node_la = node_la->prev;
 		}
-		return (1);
 	}
+	return (1);
 }
