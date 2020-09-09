@@ -1,6 +1,27 @@
 #include "lists.h"
 #include <stdlib.h>
-#include <stdio.h>
+/**
+ * l_node - last node
+ * @head: head of the list
+ *
+ * Return: last node
+ */
+listint_t *l_node(listint_t *head)
+{
+	void *prev = NULL;
+	listint_t *temp = head;
+
+	while (temp)
+	{
+		temp->prev = prev;
+		prev = temp;
+		temp = temp->next;
+	}
+	temp = head;
+	while (temp->next)
+		temp = temp->next;
+	return (temp);
+}
 /**
  * is_palindrome - checks if a singly linked list is a palindrome
  * @head: head of the list
@@ -9,31 +30,16 @@
  */
 int is_palindrome(listint_t **head)
 {
-	int i = 0, temp_array, len, x = 0, re = 1, co;
-	int array[10];
-	listint_t *tmp = *head;
+	listint_t *node_la = NULL, *temp = *head;
 
-	while (tmp)
+	node_la = l_node(*head);
+
+	while (temp != NULL && node_la != NULL)
 	{
-		array[i] = tmp->n;
-		tmp = tmp->next;
-		i++;
-	}
-	len = sizeof(array) / sizeof(array[0]);
-	for (x = 0; x < len / 2; x++)
-	{
-		temp_array = array[x];
-		array[x] = array[len - 1 - x];
-		array[len - 1 - x] = temp_array;
-	}
-	co = len - 1;
-	i = 0;
-	while (i < 10 && co >= 0)
-	{
-		if (array[i] != array[co])
+		if (node_la->n != temp->n)
 			return (0);
-		i++;
-		co--;
+		temp = temp->next;
+		node_la = node_la->prev;
 	}
-	return (re);
+	return (1);
 }
