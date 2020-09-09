@@ -30,16 +30,19 @@ listint_t *l_node(listint_t *head)
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *node_la = NULL, *temp = *head;
-
-	node_la = l_node(*head);
-
-	while (temp != NULL && node_la != NULL)
+	if (*head && head)
 	{
-		if (node_la->n != temp->n)
-			return (0);
-		temp = temp->next;
-		node_la = node_la->prev;
+		listint_t *node_la = NULL, *temp = *head;
+
+		node_la = l_node(*head);
+
+		while (temp != NULL && node_la != NULL)
+		{
+			if (node_la->n != temp->n)
+				return (0);
+			temp = temp->next;
+			node_la = node_la->prev;
+		}
 	}
 	return (1);
 }
