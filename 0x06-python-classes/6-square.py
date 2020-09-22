@@ -23,7 +23,11 @@ class Square:
         for j in range(self.__position[1]):
             print()
         for j in range(self.__size):
-            print("{}{}".format(" " * self.position[0], "#" * self.size))
+            for of in range(self.__position[0]):
+                print(" ", end="")
+            for v in range(self.__size):
+                print("#", end="")
+            print()
 
     @property
     def size(self):
