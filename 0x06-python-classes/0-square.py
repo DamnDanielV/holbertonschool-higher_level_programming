@@ -2,5 +2,5 @@
 """ Square Module """
 
 class Square:
-    """ Here a Square Class """
+    """ This is the docstring of Square Class """
     pass
