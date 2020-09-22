@@ -6,11 +6,7 @@ class Square:
     """ This is docstring for Square Class """
     def __init__(self, size=0, position=(0, 0)):
         """ instantiation of square with position & size """
-        if type(size) != int:
-            raise TypeError("size must be an integer")
-        else:
-            if size >= 0:
-                self.__size = size
+        self.__size = size
 
         self.__position = position
 
