@@ -43,7 +43,7 @@ class Square:
     @position.setter
     def position(self, value):
         if ((len(value) != 2) or (type(value[1] != int) or
-           (type(value[2]) != int))or (value[0] < 0 orvalue[1] < 0)):
+           (type(value[2]) != int))or (value[0] < 0 or value[1] < 0)):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
