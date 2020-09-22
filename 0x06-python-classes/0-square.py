@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
+""" Square Module """
 
 class Square:
-    """se define una clase Square vacia sin atributos ni metodos"""
+    """ Here a Square Class """
     pass
