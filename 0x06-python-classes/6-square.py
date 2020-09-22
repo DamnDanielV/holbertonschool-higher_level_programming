@@ -59,7 +59,8 @@ class Square:
     def position(self, value):
         """ sets position variable of Square class instance """
         if ((len(value) != 2) or (type(value[1] != int) or
-           (type(value[2]) != int))or (value[0] < 0 or value[1] < 0) or (type(value) != tuple)):
+           (type(value[2]) != int)) or (value[0] < 0 or value[1] < 0) or
+           (type(value) != tuple)):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
