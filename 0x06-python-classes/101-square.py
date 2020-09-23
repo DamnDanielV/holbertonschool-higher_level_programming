@@ -58,3 +58,20 @@ class Square:
         else:
             for i in range(self.__size):
                 print('#' * self.__size)
+
+    def __str__(self):
+        """square to strings of #"""
+        ch = ""
+        if self.__size != 0:
+            if not (self.__position):
+                for i in range(self.__size):
+                    ch += str(("#" * self.__size) + "\n")
+                ch = ch[:-1]
+            else:
+                for i in range(self.__position[1]):
+                    ch += "\n"
+                for i in range(self.__size):
+                    ch += str(" " * self.__position[0])
+                    ch += str(("#" * self.__size) + "\n")
+                ch = ch[:-1]
+        return ch
