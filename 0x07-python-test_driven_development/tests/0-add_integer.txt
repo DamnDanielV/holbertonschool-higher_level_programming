@@ -1,0 +1,66 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+
+# int and int
+>>> add_integer(3, 5)
+8
+
+# float and int
+>>> add_integer(4.0, 5)
+9
+
+# str and int
+>>> add_integer("hello", 5)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+# int and str
+>>> add_integer(5, "hello")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+# No arguments
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+# None
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+# None and None
+>>> add_integer(None, None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+# large int an None
+>>> add_integer(999999999999999999999999999999999999999999999, None)
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+# None an large int
+>>> add_integer(None, 999999999999999999999999999999999999999999999)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+# Boolean and int
+>>> add_integer(True, 5)
+6
+
+#int and Boolean
+>>> add_integer(5, False)
+5
+
+#Boolean and Boolean
+>>> add_integer(True, False)
+1
+
+# extra argument
+>>> add_integer(2, 3, 4)
+Traceback (most recent call last):
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+# one argument
+>>> add_integer(2)
+100
