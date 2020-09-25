@@ -28,7 +28,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_list_integers(self):
         """test if the item is a int"""
         for num in ma:
-            assert(isinstance(num, (int, str)))
+            assert(isinstance(num, int))
 
 
 class TestExpectedFailure(unittest.TestCase):
