@@ -19,7 +19,7 @@ def matrix_divided(matrix, div):
         for j in range(len(fila)):
             if not isinstance(fila[j], (int, float)):
                 raise TypeError("matrix must be a matrix"
-                                "(list of lists) of integers/floats")
+                                " (list of lists) of integers/floats")
             new_f.append(round((fila[j] / div), 2))
         n_m.append(new_f)
     return n_m
