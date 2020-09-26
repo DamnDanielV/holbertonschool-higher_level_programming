@@ -12,6 +12,14 @@ class TestMaxInteger(unittest.TestCase):
         ma = [2, 3, 4, 5]
         self.assertEqual(max_integer(ma), 5)
 
+    def max_at_beginning(self):
+        """ test for max at the beginning"""
+        self.assertEqual(max_integer([5, 2, 3]), 5)
+
+    def max_in_the_middle(self):
+        """ test for max in the middle"""
+        self.assertEqual(max_integer([2, 5, 3]), 5)
+
     def test_empty_list(self):
         """test when empty list"""
         self.assertIsNone(max_integer([]))
