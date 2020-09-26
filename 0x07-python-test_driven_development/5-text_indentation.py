@@ -3,10 +3,11 @@
 
 
 def text_indentation(text):
-    """function to print a string"""
+    """ removes some characters"""
     if not isinstance(text, str):
-        raise TypeError("text must be a string")
-    for letter in text:
-        if letter == "." or letter == "?" or letter == ":":
-            print("\n\n")
-        print("{:s}".format(letter), end="")
+        raise TypeError('text must be a string')
+    for c in ['.', '?', ':']:
+        text = text.replace(c, c + '\n\n')
+    st_n = [line.strip() for line in text.split('\n')]
+    st_n = '\n'.join(st_n)
+    print(st_n, end='')
