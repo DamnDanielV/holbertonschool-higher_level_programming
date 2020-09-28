@@ -55,13 +55,10 @@ class Rectangle:
 
     def __str__(self):
         """prints a square of #"""
-        st_re = ""
         if self.__width == 0 or self.__height == 0:
             return ("")
-        else:
-            for char in range(self.__height):
-                st_re += str(self.print_symbol * self.__width) + "\n"
-            return st_re
+        res = "#" * self.width
+        return ("\n".join(list(res for ch in range(self.height))))
 
     def __repr__(self):
         """returns strings representation of aquare"""
