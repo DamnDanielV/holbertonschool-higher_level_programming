@@ -62,7 +62,7 @@ class Rectangle:
 
     def __repr__(self):
         """returns strings representation of aquare"""
-        return ("Rectangle({:d}, {:d})".format(self.__width, self.__height))
+        return ("Rectangle({}, {})".format(self.__width, self.__height))
 
     def __del__(Self):
         """detects of a deletion instance"""
