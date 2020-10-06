@@ -1,0 +1,23 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> basege = BaseGeometry()
+
+>>> basege.integer_validator("name", "daniel")
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> basege.integer_validator("age", -4)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+>>> basege.integer_validator("distance", -4)
+Traceback (most recent call last):
+ValueError: distance must be greater than 0
+
+>>> basege.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> basege.integer_validator("name", None)
+Traceback (most recent call last):
+TypeError: name must be an integer
