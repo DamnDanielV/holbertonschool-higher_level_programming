@@ -20,7 +20,8 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """return an specification of rectangle"""
-        return ("[Rectangle] {}/{}".format(self.__width, self.__height))
+        return ("[{}] {}/{}".format(type(self).__name__,
+                self.__width, self.__height))
 
 
 class Square(Rectangle):
