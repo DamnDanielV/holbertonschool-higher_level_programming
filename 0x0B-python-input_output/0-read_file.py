@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""documentacion"""
 
 def read_file(filename=""):
     """reads a file"""
