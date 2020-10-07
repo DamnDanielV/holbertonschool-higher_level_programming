@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-    """module number of lines
-    """
+"""module number of lines"""
 
 
 def number_of_lines(filename=""):
