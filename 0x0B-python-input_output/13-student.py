@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""module class student 3"""
 
 
 class Student:
