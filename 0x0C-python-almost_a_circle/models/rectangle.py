@@ -1,5 +1,5 @@
 """Module Rectangle"""
-from base import Base
+from models.base import Base
 import sys
 
 
