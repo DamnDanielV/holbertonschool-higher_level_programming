@@ -7,11 +7,12 @@ import MySQLdb
 def cities_state():
     """list cities of a state"""
     db = MySQLdb.connect(
-        host='localhost',
+        host="localhost",
         port=3306,
         user=sys.argv[1],
         passwd=sys.argv[2],
-        db=sys.argv[3]
+        db=sys.argv[3],
+        charset="utf8"
     )
     cur = db.cursor()
     name = ''.join([i for i in sys.argv[4] if i != "'" and i != ";"])

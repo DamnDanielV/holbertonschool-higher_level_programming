@@ -7,11 +7,12 @@ import MySQLdb
 def list_cityes():
     """list cityes"""
     db = MySQLdb.connect(
-        host='localhost',
+        host="localhost",
         port=3306,
         user=sys.argv[1],
         passwd=sys.argv[2],
-        db=sys.argv[3]
+        db=sys.argv[3],
+        charset="utf8"
     )
     cur = db.cursor()
     cur.execute("SELECT cities.id, cities.name, states.name\
