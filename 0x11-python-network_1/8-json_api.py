@@ -18,7 +18,7 @@ def req_params(url, user):
 
 
 if __name__ == '__main__':
-    url = "http://f1b12c907bf7.87bf5168.hbtn-cod.io:5000/search_user"
+    url = "http://0.0.0.0:5000/search_user"
     if len(argv) == 1:
         req_params(url, "")
     else:
