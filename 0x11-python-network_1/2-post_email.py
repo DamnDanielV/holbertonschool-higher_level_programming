@@ -11,7 +11,7 @@ def request_param(url, email):
     data = parse.urlencode(params).encode('ascii')
     request = req.Request(url, data)
     with req.urlopen(request) as res:
-        print("Your email is: {}".format(res.read().decode("utf-8")))
+        print("{}".format(res.read().decode("utf-8")))
 
 
 if __name__ == '__main__':
