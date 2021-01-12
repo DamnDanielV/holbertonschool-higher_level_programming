@@ -8,7 +8,7 @@ def commits_github(repo, owner):
     """makes a request to github"""
     url = ('https://api.github.com/repos/{}/{}/commits'.format(owner, repo))
     res = get(url)
-    js =res.json()
+    js = res.json()
     for i in range(10):
         co = js[i]
         sha = co.get('sha')
