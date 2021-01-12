@@ -9,11 +9,18 @@ def commits_github(repo, owner):
     url = ('https://api.github.com/repos/{}/{}/commits'.format(owner, repo))
     res = get(url)
     js = res.json()
-    for i in range(10):
-        co = js[i]
-        sha = co.get('sha')
-        author = co.get('commit').get('author').get('name')
-        print('{}: {}'.format(sha, author))
+    if len(js) >= 10:
+        for i in range(10):
+            co = js[i]
+            sha = co.get('sha')
+            author = co.get('commit').get('author').get('name')
+            print('{}: {}'.format(sha, author))
+    else:
+        for i in range(len(js)):
+            co = js[i]
+            sha = co.get('sha')
+            author = co.get('commit').get('author').get('name')
+            print('{}: {}'.format(sha, author))
 
 
 if __name__ == '__main__':
