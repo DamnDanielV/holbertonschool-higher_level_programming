@@ -1,12 +1,7 @@
 #!/usr/bin/node
-const array = process.argv.sort((a, b) => {
-  return a - b;
-});
-const verify = (array) => {
-  if (array.length < 4) {
-    console.log(0);
+if (process.argv.length <= 3) {
+    console.log('0');
   } else {
-    console.log(parseInt(array[3]));
+    let argv = process.argv.slice(2);
+    console.log(argv.sort()[argv.length - 2]);
   }
-};
-verify(array);
